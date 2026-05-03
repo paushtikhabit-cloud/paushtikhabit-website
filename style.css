@@ -68,3 +68,7 @@ footer {
   background: #111;
   color: white;
 }
+.logo img {
+  height: 40px;
+  width: auto;
+}
