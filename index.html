@@ -1,92 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Paushtik Habit</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Paushtik Habit | Preventive Healthcare Brand</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
-<header>
-  <div class="logo">
-    <img src="Logo.png">
+<header class="navbar">
+  <div class="logo-wrap">
+    <img src="logo.png" alt="Paushtik Habit Logo" />
   </div>
+
   <nav>
-    <a href="#">Home</a>
-    <a href="#">Health Topics</a>
-    <a href="#">About</a>
-    <a href="#">Contact</a>
+    <a href="#home">Home</a>
+    <a href="#topics">Health Topics</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
   </nav>
 </header>
 
-<section class="hero">
-  <div class="hero-text">
-    <h1>Prevent Today.<br><span>Thrive Tomorrow.</span></h1>
-    <p>Knowledge. Nutrition. Better Habits.</p>
-    <p class="tagline">Not medicines. Just better habits.</p>
+<section class="hero" id="home">
+  <div class="hero-content">
+    <div class="hero-text">
+      <p class="eyebrow">Preventive healthcare, made simple</p>
+      <h1>Prevent Today.<br><span>Thrive Tomorrow.</span></h1>
+      <p class="subtext">
+        Knowledge. Nutrition. Better habits for a healthier you.
+      </p>
+
+      <div class="brand-line">
+        <span>Not medicines.</span>
+        <span>Just better habits.</span>
+      </div>
+
+      <a href="#topics" class="primary-btn">Explore Health Topics →</a>
+    </div>
+
+    <div class="hero-image">
+      <img src="hero.png" alt="Preventive health illustration" />
+    </div>
   </div>
 </section>
 
-<section class="mission">
-  <h2>Our Aim</h2>
-  <p>Empowering people with preventive healthcare through awareness, nutrition and daily habits.</p>
+<section class="mission" id="about">
+  <p class="section-label">Our Mission</p>
+
+  <div class="mission-grid">
+    <div class="mission-card">
+      <h3>Our Aim</h3>
+      <p>Empower every individual with simple, science-backed nutrition awareness.</p>
+    </div>
+
+    <div class="mission-card">
+      <h3>Our Goal</h3>
+      <p>Make prevention a daily habit through better choices and consistent routines.</p>
+    </div>
+
+    <div class="mission-card">
+      <h3>Our Promise</h3>
+      <p>Clean thinking. Transparent education. No fear, no confusion, no overcomplication.</p>
+    </div>
+  </div>
 </section>
 
-<section class="topics">
-  <h2>Learn. Understand. Take Charge.</h2>
+<section class="topics" id="topics">
+  <h2>Learn. Understand. <span>Take Charge.</span></h2>
+  <p class="topics-intro">
+    A crisp guide to the key segments of modern preventive wellness.
+  </p>
 
-  <div class="grid">
+  <div class="topic-grid">
 
-    <div class="card">
-      <img src="women.png">
-      <h3>Women & PCOS</h3>
-      <p>Balance hormones. Support cycles. Thrive daily.</p>
+    <div class="topic-card pink">
+      <img src="women.png" alt="Women and PCOS" />
+      <h3>Women’s Health & PCOS</h3>
+      <p>Hormones, cycles, energy and balance — prevention starts with understanding your body.</p>
     </div>
 
-    <div class="card">
-      <img src="beauty.png">
-      <h3>Beauty & Hair</h3>
-      <p>Healthy from within. Glow outside.</p>
+    <div class="topic-card purple">
+      <img src="beauty.png" alt="Beauty hair skin" />
+      <h3>Beauty • Hair • Skin</h3>
+      <p>Glow is not just topical. Skin, hair and beauty often begin with nutrition within.</p>
     </div>
 
-    <div class="card">
-      <img src="gut.png">
-      <h3>Gut Health</h3>
-      <p>A healthy gut = a healthy you.</p>
+    <div class="topic-card green">
+      <img src="gut.png" alt="Gut health" />
+      <h3>Gut Health & Fibre</h3>
+      <p>Your gut influences digestion, immunity, mood and daily comfort more than you think.</p>
     </div>
 
-    <div class="card">
-      <img src="sleep.png">
+    <div class="topic-card blue">
+      <img src="sleep.png" alt="Sleep calm" />
       <h3>Sleep & Calm</h3>
-      <p>Better sleep. Better mind.</p>
+      <p>Better sleep supports better mood, better recovery and better decisions.</p>
     </div>
 
-    <div class="card">
-      <img src="immunity.png">
+    <div class="topic-card orange">
+      <img src="immunity.png" alt="Immunity" />
       <h3>Immunity</h3>
-      <p>Strengthen your defense naturally.</p>
+      <p>Immunity is not a one-day fix. It is built through nutrition, recovery and habits.</p>
     </div>
 
-    <div class="card">
-      <img src="protein.png">
+    <div class="topic-card purple">
+      <img src="protein.png" alt="Protein strength" />
       <h3>Protein & Strength</h3>
-      <p>Build strength. Recover better.</p>
+      <p>Protein is not only for gyms. It supports muscles, metabolism and everyday strength.</p>
     </div>
 
-    <div class="card">
-      <img src="men.png">
+    <div class="topic-card blue">
+      <img src="men.png" alt="Men's health" />
       <h3>Men’s Health</h3>
-      <p>Performance. Energy. Prevention.</p>
+      <p>Energy, stamina, strength and long-term wellness deserve daily attention too.</p>
     </div>
 
   </div>
 </section>
 
-<footer>
-  <p>Not medicines. Just better habits.</p>
-  <p>© 2026 Paushtik Habit</p>
+<section class="awareness">
+  <div>
+    <h2>Stay informed. Stay healthy.</h2>
+    <p>Join our community for simple wellness insights, nutrition education and preventive health tips.</p>
+  </div>
+  <a href="mailto:paushtik.habit@gmail.com" class="primary-btn">Join Our Community</a>
+</section>
+
+<footer id="contact">
+  <div>
+    <img src="logo.png" alt="Paushtik Habit Logo" />
+    <p>Not medicines. Just better habits.</p>
+  </div>
+
+  <div>
+    <h4>Contact</h4>
+    <p>paushtik.habit@gmail.com</p>
+  </div>
 </footer>
 
 </body>
