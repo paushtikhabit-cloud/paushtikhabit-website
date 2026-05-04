@@ -1,74 +1,90 @@
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: #ffffff;
-  color: #222;
+  font-family: Arial;
+  background: #0b0f1c;
+  color: white;
 }
 
 /* Header */
 header {
   display: flex;
   justify-content: space-between;
-  padding: 20px;
-  background: #f8f8f8;
+  padding: 20px 40px;
 }
 
-.logo {
-  font-size: 24px;
-  font-weight: bold;
+.logo img {
+  height: 100px; /* 2.5x increased */
 }
 
 nav a {
-  margin: 0 10px;
+  margin: 0 15px;
+  color: white;
   text-decoration: none;
-  color: #333;
 }
 
-/* Hero Section */
+/* Hero */
 .hero {
-  text-align: center;
-  padding: 80px 20px;
-  background: linear-gradient(135deg, #ffefd5, #ffe4e1);
+  padding: 80px 40px;
 }
 
 .hero h1 {
-  font-size: 40px;
+  font-size: 50px;
 }
 
-.btn {
-  padding: 12px 20px;
-  background: black;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
+.hero span {
+  color: #ff4fd8;
 }
 
-/* Products */
-.products {
-  padding: 50px 20px;
+.tagline {
+  color: #aaa;
+}
+
+/* Mission */
+.mission {
+  padding: 50px;
   text-align: center;
+}
+
+/* Topics */
+.topics {
+  padding: 50px;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
   gap: 20px;
 }
 
 .card {
-  border: 1px solid #ddd;
+  background: #12182a;
   padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
   border-radius: 10px;
 }
 
+/* Color accents */
+.card:nth-child(1) { border: 1px solid #ff4fd8; } /* women */
+.card:nth-child(2) { border: 1px solid #a855f7; } /* beauty */
+.card:nth-child(3) { border: 1px solid #22c55e; } /* gut */
+.card:nth-child(4) { border: 1px solid #3b82f6; } /* sleep */
+.card:nth-child(5) { border: 1px solid #f97316; } /* immunity */
+.card:nth-child(6) { border: 1px solid #8b5cf6; } /* protein */
+.card:nth-child(7) { border: 1px solid #60a5fa; } /* men */
+
 /* Footer */
 footer {
-  padding: 30px;
   text-align: center;
-  background: #111;
-  color: white;
-}
-.logo img {
-  height: 40px;
-  width: auto;
+  padding: 30px;
+  background: black;
 }
