@@ -1,90 +1,291 @@
-body {
+* {
   margin: 0;
-  font-family: Arial;
-  background: #0b0f1c;
-  color: white;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Header */
-header {
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background:
+    radial-gradient(circle at 20% 10%, rgba(255, 65, 180, 0.14), transparent 28%),
+    radial-gradient(circle at 85% 15%, rgba(70, 150, 255, 0.16), transparent 28%),
+    #070b16;
+  color: #ffffff;
+}
+
+.navbar {
+  width: 100%;
+  padding: 22px 6%;
   display: flex;
   justify-content: space-between;
-  padding: 20px 40px;
+  align-items: center;
 }
 
-.logo img {
-  height: 100px; /* 2.5x increased */
+.logo-wrap img {
+  height: 125px;
+  width: auto;
+  display: block;
+}
+
+nav {
+  display: flex;
+  gap: 34px;
 }
 
 nav a {
-  margin: 0 15px;
-  color: white;
+  color: #ffffff;
   text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
 }
 
-/* Hero */
+nav a:hover {
+  color: #ff4ecb;
+}
+
 .hero {
-  padding: 80px 40px;
+  padding: 40px 6% 30px;
+}
+
+.hero-content {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  align-items: center;
+  gap: 50px;
+}
+
+.eyebrow {
+  color: #5ddcff;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 18px;
 }
 
 .hero h1 {
-  font-size: 50px;
+  font-size: 66px;
+  line-height: 1.05;
+  margin-bottom: 24px;
 }
 
-.hero span {
-  color: #ff4fd8;
+.hero h1 span,
+.topics h2 span {
+  background: linear-gradient(90deg, #ff4ecb, #a855f7, #35c7ff);
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
-.tagline {
-  color: #aaa;
+.subtext {
+  font-size: 22px;
+  color: #dbe4f3;
+  max-width: 520px;
+  margin-bottom: 24px;
 }
 
-/* Mission */
-.mission {
-  padding: 50px;
-  text-align: center;
+.brand-line {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 34px;
+  color: #f6d9f0;
+  font-size: 18px;
 }
 
-/* Topics */
-.topics {
-  padding: 50px;
+.brand-line span:first-child {
+  color: #ff4ecb;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
-  gap: 20px;
+.brand-line span:last-child {
+  color: #35c7ff;
 }
 
-.card {
-  background: #12182a;
-  padding: 20px;
-  border-radius: 15px;
-  text-align: center;
-  transition: 0.3s;
+.primary-btn {
+  display: inline-block;
+  background: linear-gradient(90deg, #ff4ecb, #8b5cf6);
+  color: white;
+  text-decoration: none;
+  padding: 16px 28px;
+  border-radius: 999px;
+  font-weight: 700;
+  box-shadow: 0 0 30px rgba(255, 78, 203, 0.35);
 }
 
-.card:hover {
-  transform: scale(1.05);
-}
-
-.card img {
+.hero-image img {
   width: 100%;
-  border-radius: 10px;
+  border-radius: 28px;
+  box-shadow: 0 0 60px rgba(255, 78, 203, 0.22);
 }
 
-/* Color accents */
-.card:nth-child(1) { border: 1px solid #ff4fd8; } /* women */
-.card:nth-child(2) { border: 1px solid #a855f7; } /* beauty */
-.card:nth-child(3) { border: 1px solid #22c55e; } /* gut */
-.card:nth-child(4) { border: 1px solid #3b82f6; } /* sleep */
-.card:nth-child(5) { border: 1px solid #f97316; } /* immunity */
-.card:nth-child(6) { border: 1px solid #8b5cf6; } /* protein */
-.card:nth-child(7) { border: 1px solid #60a5fa; } /* men */
+.mission {
+  margin: 40px 6%;
+  padding: 34px;
+  border: 1px solid rgba(255, 78, 203, 0.35);
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.035);
+  backdrop-filter: blur(10px);
+}
 
-/* Footer */
-footer {
+.section-label {
   text-align: center;
-  padding: 30px;
-  background: black;
+  color: #ff4ecb;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 800;
+  margin-bottom: 28px;
+}
+
+.mission-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.mission-card {
+  padding: 24px;
+  border-left: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.mission-card h3 {
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+
+.mission-card p {
+  color: #cfd7e6;
+  line-height: 1.6;
+}
+
+.topics {
+  padding: 40px 6%;
+  text-align: center;
+}
+
+.topics h2 {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.topics-intro {
+  color: #cfd7e6;
+  margin-bottom: 36px;
+  font-size: 18px;
+}
+
+.topic-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+.topic-card {
+  background: rgba(255, 255, 255, 0.045);
+  border-radius: 22px;
+  padding: 16px 16px 24px;
+  text-align: center;
+  transition: 0.25s ease;
+  overflow: hidden;
+}
+
+.topic-card:hover {
+  transform: translateY(-8px);
+}
+
+.topic-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 18px;
+  margin-bottom: 18px;
+}
+
+.topic-card h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.topic-card p {
+  color: #d5dbea;
+  line-height: 1.5;
+  font-size: 15px;
+}
+
+.pink { border: 1px solid rgba(255, 78, 203, 0.55); }
+.purple { border: 1px solid rgba(168, 85, 247, 0.55); }
+.green { border: 1px solid rgba(89, 210, 97, 0.55); }
+.blue { border: 1px solid rgba(53, 199, 255, 0.55); }
+.orange { border: 1px solid rgba(255, 145, 48, 0.65); }
+
+.awareness {
+  margin: 40px 6%;
+  padding: 34px;
+  border-radius: 26px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background:
+    linear-gradient(90deg, rgba(255, 78, 203, 0.15), rgba(53, 199, 255, 0.12));
+  border: 1px solid rgba(255, 78, 203, 0.35);
+}
+
+.awareness h2 {
+  font-size: 30px;
+  margin-bottom: 8px;
+}
+
+.awareness p {
+  color: #d6deec;
+}
+
+footer {
+  margin-top: 40px;
+  padding: 40px 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #03050c;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+footer img {
+  height: 100px;
+}
+
+footer p {
+  color: #cfd7e6;
+  margin-top: 8px;
+}
+
+footer h4 {
+  color: #ff4ecb;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 900px) {
+  .navbar {
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero-content {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 46px;
+  }
+
+  .mission-grid,
+  .topic-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .awareness,
+  footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 24px;
+  }
 }
