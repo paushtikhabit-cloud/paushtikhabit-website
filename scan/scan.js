@@ -1,0 +1,12 @@
+const products={
+  "magnesium":{name:"Magnesium Glycinate",meta:"Daily supplement",event:"Paushtik Habit — Magnesium",report:null},
+  "pcos":{name:"PCOS Support",meta:"Daily supplement",event:"Paushtik Habit — PCOS Support",report:null},
+  "womens-multivitamin":{name:"Women’s Multivitamin",meta:"Daily supplement",event:"Paushtik Habit — Women’s Multivitamin",report:null},
+  "vegetarian-omega-3":{name:"Vegetarian Omega-3",meta:"Daily supplement",event:"Paushtik Habit — Vegetarian Omega-3",report:null}
+};
+const slug=new URLSearchParams(location.search).get("product")||location.pathname.split("/").filter(Boolean).pop();
+const p=products[slug]||{name:"Your Daily Habit",meta:"Paushtik Habit",event:"Paushtik Habit — Daily Habit",report:null};
+document.getElementById("productName").textContent=p.name;document.getElementById("productMeta").textContent=p.meta;document.title=p.name+" | Paushtik Habit";
+if(p.report){document.getElementById("reportPending").hidden=true;document.getElementById("reportAvailable").hidden=false;document.getElementById("batch").textContent=p.report.batch;document.getElementById("lab").textContent=p.report.lab;document.getElementById("reportDate").textContent=p.report.date;document.getElementById("reportLink").href=p.report.url}
+function pad(n){return String(n).padStart(2,"0")}function localICSDate(d){return d.getFullYear()+pad(d.getMonth()+1)+pad(d.getDate())+"T"+pad(d.getHours())+pad(d.getMinutes())+"00"}
+document.getElementById("calendarBtn").addEventListener("click",()=>{const val=document.getElementById("reminderTime").value||"21:00";const [h,m]=val.split(":").map(Number);const start=new Date();start.setHours(h,m,0,0);if(start<=new Date())start.setDate(start.getDate()+1);const end=new Date(start.getTime()+10*60000);const esc=s=>s.replace(/([,;\\])/g,"\\$1").replace(/\n/g,"\\n");const ics=["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//Paushtik Habit//Daily Habit Reminder//EN","CALSCALE:GREGORIAN","BEGIN:VEVENT","DTSTART:"+localICSDate(start),"DTEND:"+localICSDate(end),"RRULE:FREQ=DAILY","SUMMARY:"+esc(p.event),"DESCRIPTION:"+esc("Time for your daily habit. Follow the directions on your product label."),"BEGIN:VALARM","TRIGGER:-PT5M","ACTION:DISPLAY","DESCRIPTION:"+esc(p.event),"END:VALARM","END:VEVENT","END:VCALENDAR"].join("\r\n");const blob=new Blob([ics],{type:"text/calendar;charset=utf-8"});const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="paushtik-habit-reminder.ics";document.body.appendChild(a);a.click();setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove()},1000)});
