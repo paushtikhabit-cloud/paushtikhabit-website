@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#07101b">
+<title>Paushtik Habit | Daily Habit & Lab Report</title>
+<link rel="stylesheet" href="/scan/scan.css">
+</head>
+<body>
+<main class="shell">
+  <header><a href="/" aria-label="Paushtik Habit home"><img src="/logo.png" alt="Paushtik Habit"></a><p>Not medicines. Just better habits.</p></header>
+  <section class="product">
+    <span class="verified">PRODUCT CARE</span>
+    <h1 id="productName">Your Daily Habit</h1>
+    <p id="productMeta" class="meta"></p>
+    <p class="lead">Build consistency and check what’s behind your product — all in one place.</p>
+  </section>
+  <section class="card reminder">
+    <div class="icon">⏰</div><div><span class="kicker">DAILY HABIT</span><h2>Set my reminder</h2>
+    <p>Choose a time that works for you. We’ll create a recurring calendar reminder on your device.</p></div>
+    <label for="reminderTime">Reminder time</label>
+    <input id="reminderTime" type="time" value="21:00">
+    <button id="calendarBtn">Add daily reminder to calendar</button>
+    <p class="fine">You control the reminder in your calendar and can edit or remove it anytime.</p>
+  </section>
+  <section class="card report">
+    <div class="icon">✓</div><div><span class="kicker">TRANSPARENCY</span><h2>Third-party lab test report</h2>
+    <p>View the independent laboratory report available for this product.</p></div>
+    <div id="reportAvailable" hidden>
+      <dl><div><dt>Batch</dt><dd id="batch"></dd></div><div><dt>Lab</dt><dd id="lab"></dd></div><div><dt>Report date</dt><dd id="reportDate"></dd></div></dl>
+      <a id="reportLink" class="button secondary" target="_blank" rel="noopener">View lab report</a>
+    </div>
+    <div id="reportPending" class="pending"><strong>Report coming soon</strong><span>The verified third-party report will appear here once available.</span></div>
+  </section>
+  <footer><strong>Paushtik Habit</strong><span>Simple routines. Transparent choices.</span><small>Reminder is a convenience feature and does not replace directions on the product label or professional advice.</small></footer>
+</main>
+<script src="/scan/scan.js"></script>
+</body></html>
